@@ -310,7 +310,7 @@ def sgd_optimize_deep_network(learning_rate, feature_file, validation_file, n_hi
         train_loss = [train_model(i) for i in range(n_train_batches)]
 
         # set parameters for validation
-        params = [x.get_value() for x in model.params]
+        params = [tmp.get_value() for tmp in model.params]
         for a, b in zip(model_test.params, params):
             a.set_value(b)
 
@@ -408,16 +408,16 @@ def predict_fitness(para_file, variant_file, activation=theano.tensor.nnet.relu)
     with open(variant_file, "r") as f:
         while True:
             next_n_lines = list(islice(f, 10000))
-            next_n_lines = [x.rstrip().split("\t") for x in next_n_lines]
+            next_n_lines = [tmp.rstrip().split("\t") for tmp in next_n_lines]
 
             if not next_n_lines:
                 break
 
-            feature = [x[5:len(x)] for x in next_n_lines]
+            feature = [tmp[5:len(tmp)] for tmp in next_n_lines]
             feature = numpy.array(feature, dtype=theano.config.floatX)
             y = predict_model([feature])
             for i in xrange(y.shape[0]):
-                prob = [str(x) for x in y[i]]
+                prob = [str(tmp) for tmp in y[i]]
                 print("\t".join(next_n_lines[i][0:5] + prob))
 
 

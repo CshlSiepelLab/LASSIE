@@ -272,7 +272,7 @@ if __name__ == "__main__":
                               type=float, help="learning rate of the SGD algorithm")
 
     parser_learn.add_argument("-n", dest="num", nargs="+", type=int,
-                              default=[10], help="numbers of hidden units")
+                              default=[0], help="numbers of hidden units")
 
     parser_learn.add_argument("-p", dest="penalty_L2", type=float, default=0.,
                               help="L2 penalty (weight decay)")

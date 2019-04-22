@@ -4,9 +4,7 @@ The python implementation of Poisson random field model
 from __future__ import print_function, division
 
 import sys
-import time
 import numpy
-import scipy
 import argparse
 from scipy.stats import binom, hypergeom
 from scipy.linalg import solve_banded
@@ -390,7 +388,7 @@ class PiecewiseConstantModel(object):
                     self.para_for_optimize.append(name)
             # self.polymorphism_only = False
         else:
-            raise Exception("Unknown mode of optimization: " + model + "!!\n")
+            raise Exception("Unknown mode of optimization: " + mode + "!!\n")
 
         initial_para = []
         boundary = []
