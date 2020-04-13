@@ -5,9 +5,9 @@
 
 Precomputed **LASSIE** scores (selection coefficients) are available for all potential coding variants in the human genome (hg19 assembly):
 
-Selection coefficient file: http://compgen.cshl.edu/~yihuang/LASSIE/LASSIE_fitness_effect_hg19.tsv.gz
+Selection coefficient file: http://compgen.cshl.edu/LASSIE/data/LASSIE_fitness_effect_hg19.tsv.gz
 
-Index file: http://compgen.cshl.edu/~yihuang/LASSIE/LASSIE_fitness_effect_hg19.tsv.gz.tbi
+Index file: http://compgen.cshl.edu/LASSIE/data/LASSIE_fitness_effect_hg19.tsv.gz.tbi
 
 ## Documentation 
 
